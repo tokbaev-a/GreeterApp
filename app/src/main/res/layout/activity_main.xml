@@ -38,7 +38,7 @@
         android:layout_below="@id/main"
         android:gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:text=""
+        android:text="Let's get to know each other a little"
         android:textColor="#e4834f"
         android:textSize="30dp">
     </TextView>
