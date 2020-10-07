@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,8 +25,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void submitOrder(View v) {
         EditText nameField = findViewById(R.id.name_field);
+        if (nameField.getText().toString().isEmpty()) {
+            Toast.makeText(MainActivity.this, "Empty field!", Toast.LENGTH_SHORT).show();
+        }else{
         name = nameField.getText().toString();
         display(name);
+        }
     }
     private void display(String name) {
         TextView quantityTextView = findViewById(R.id.greeting);
